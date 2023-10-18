@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  margin: 92px 50px;
+  padding: 92px 50px;
+  margin: auto; /*для центрирования блоков*/
   font-size: 18px;
   font-weight: 400;
-  width: 1338px;
+  width: 100%; /*связка max-width + width 100% для */
+  max-width: 1440px;
 }
 
 .header__menu {
@@ -46,9 +48,11 @@
 }
 
 .address {
-  width: 240px;
+  max-width: 240px;
+  width: 100%;
   font-style: inherit;
   line-height: 24.3px;
+  text-underline-position: under; /*для выравнивания подчеркивания*/
 }
 
 .overlay {
@@ -63,13 +67,17 @@
 }
 
 .cover {
-  width: 1440px;
-  height: 757px;
+  max-width: 1440px;
+  width: 100%;
+  max-height: 757px;
+  height: 100%;
   position: relative;
+  margin: auto;
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .cover__title {
@@ -138,7 +146,11 @@
 }
 
 .lots {
-  margin: 180px 50px;
+  display: block;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 182px 50px;
 }
 
 .lots__heading {
@@ -155,7 +167,8 @@
 
 .lots__card-list-item {
   display: flex;
-  width: 430px;
+  max-width: 430px;
+  width: 100%;
   height: 450px;
   list-style: none;
 }
@@ -169,6 +182,7 @@
 
 .card {
   position: relative;
+  background-position: center;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -226,8 +240,10 @@
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   gap: 25px;
+  margin: auto;
   padding: 0px 50px;
 }
 
@@ -250,7 +266,8 @@
 }
 
 .about__logo-image {
-  width: 148px;
+  max-width: 148px;
+  width: 100%;
   height: 114px;
   flex-shrink: 0;
 }
@@ -273,9 +290,11 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   font-size: 18px;
   font-weight: 400;
+  margin: auto;
   padding: 180px 50px 90px;
 }
 
@@ -304,9 +323,9 @@
   justify-content: space-between;
   list-style: none;
   width: 240px;
-  height: 48px;
 }
 
 .footer__social-list-item {
-  width: 48px;
+  max-width: 48px;
+  width: 100%;
 }
